@@ -2,6 +2,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Timer.wait_time = 25
 	spawn_character()
 	print("ready")
 
@@ -44,3 +45,5 @@ func spawn_character():
 	player.position = Vector2(304 / 2, 496 / 2)
 	player.show()
 	print(player.position)
+
+

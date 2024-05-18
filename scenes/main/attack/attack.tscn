@@ -280,6 +280,10 @@ shape = SubResource("RectangleShape2D_herit")
 
 [node name="AttackGui" parent="." instance=ExtResource("6_ecpfo")]
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 25.0
+autostart = true
+
 [connection signal="input_event" from="TreeArea1" to="." method="_on_tree_area_1_input_event"]
 [connection signal="input_event" from="TreeArea2" to="." method="_on_tree_area_2_input_event"]
 [connection signal="input_event" from="TreeArea3" to="." method="_on_tree_area_3_input_event"]
