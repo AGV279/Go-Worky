@@ -2,6 +2,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	spawn_character()
 	print("ready")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,3 +32,8 @@ func _on_tree_area_4_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton && Input.is_action_just_released("select"):
 		print("To tree 4")
 
+func spawn_character():
+	var player = get_node("Character")
+	player.position = Vector2(304 / 2, 496 / 2)
+	player.show()
+	print(player.position)

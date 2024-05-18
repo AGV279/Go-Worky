@@ -235,6 +235,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1310723, 131072, 3, 1310724, 131072, 3, 1310725, 131072, 3, 1310726, 131072, 3, 1310727, 131072, 3, 1310728, 131072, 3, 1310729, 131072, 3, 1310730, 131072, 3, 1310731, 131072, 3, 1310732, 131072, 3, 1310733, 131072, 3, 1310734, 131072, 3, 1310735, 131072, 3, 1310736, 196608, 3, 1310722, 65536, 3)
 
 [node name="Character" parent="." instance=ExtResource("4_wjpdk")]
+visible = false
 
 [node name="TreeMarker1" type="Marker2D" parent="."]
 position = Vector2(96, 168)
