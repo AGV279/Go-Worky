@@ -211,12 +211,12 @@ sources/0 = SubResource("TileSetAtlasSource_lw6qw")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_herit"]
 size = Vector2(30, 30)
 
-[node name="AttackScene" type="Node2D"]
+[node name="AttackScene" type="Node"]
+process_mode = 3
 script = ExtResource("1_1imwg")
 
 [node name="World" type="Node2D" parent="."]
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMap" parent="World"]
 tile_set = SubResource("TileSet_nfwwa")
@@ -238,19 +238,15 @@ layer_0/tile_data = PackedInt32Array(1310723, 131072, 3, 1310724, 131072, 3, 131
 
 [node name="TreeMarker1" type="Marker2D" parent="."]
 position = Vector2(96, 168)
-metadata/_edit_lock_ = true
 
 [node name="TreeMarker2" type="Marker2D" parent="."]
 position = Vector2(176, 168)
-metadata/_edit_lock_ = true
 
 [node name="TreeMarker3" type="Marker2D" parent="."]
 position = Vector2(96, 248)
-metadata/_edit_lock_ = true
 
 [node name="TreeMarker4" type="Marker2D" parent="."]
 position = Vector2(176, 248)
-metadata/_edit_lock_ = true
 
 [node name="TreeArea1" type="Area2D" parent="."]
 position = Vector2(112, 160)
@@ -279,3 +275,8 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea4"]
 shape = SubResource("RectangleShape2D_herit")
+
+[connection signal="input_event" from="TreeArea1" to="." method="_on_tree_area_1_input_event"]
+[connection signal="input_event" from="TreeArea2" to="." method="_on_tree_area_2_input_event"]
+[connection signal="input_event" from="TreeArea3" to="." method="_on_tree_area_3_input_event"]
+[connection signal="input_event" from="TreeArea4" to="." method="_on_tree_area_4_input_event"]
