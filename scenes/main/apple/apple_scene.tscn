@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://718s2rladpid"]
+
+[ext_resource type="Texture2D" uid="uid://byr24dh0smh3f" path="res://resources/Created/Mzna-Piskel-1.png" id="1_us7w8"]
+[ext_resource type="Script" path="res://scenes/main/apple/apple.gd" id="1_vrgc1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gy6rr"]
+size = Vector2(42, 34)
+
+[node name="Apple" type="Area2D"]
+script = ExtResource("1_vrgc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -7)
+shape = SubResource("RectangleShape2D_gy6rr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_us7w8")

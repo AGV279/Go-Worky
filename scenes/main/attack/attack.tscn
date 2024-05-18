@@ -252,6 +252,8 @@ position = Vector2(176, 248)
 
 [node name="TreeArea1" type="Area2D" parent="."]
 position = Vector2(112, 160)
+collision_layer = 2
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea1"]
@@ -259,6 +261,8 @@ shape = SubResource("RectangleShape2D_herit")
 
 [node name="TreeArea2" type="Area2D" parent="."]
 position = Vector2(192, 160)
+collision_layer = 2
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea2"]
@@ -266,6 +270,8 @@ shape = SubResource("RectangleShape2D_herit")
 
 [node name="TreeArea3" type="Area2D" parent="."]
 position = Vector2(112, 240)
+collision_layer = 2
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea3"]
@@ -273,6 +279,8 @@ shape = SubResource("RectangleShape2D_herit")
 
 [node name="TreeArea4" type="Area2D" parent="."]
 position = Vector2(192, 240)
+collision_layer = 2
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea4"]

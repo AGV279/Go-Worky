@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3ns27ohhs4co"]
+
+[ext_resource type="Texture2D" uid="uid://byr24dh0smh3f" path="res://resources/Created/Mzna-Piskel-1.png" id="1_6n3b6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rl7gh"]
+radius = 8.0
+
+[node name="Apple" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rl7gh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_6n3b6")
