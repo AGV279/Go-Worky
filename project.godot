@@ -11,10 +11,13 @@ config_version=5
 [application]
 
 config/name="Go Worky"
-run/main_scene="res://scenes/Test/Test.tscn"
+run/main_scene="res://scenes/main/attack/attack.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=304
+window/size/viewport_height=496
+window/size/mode=2
 window/stretch/mode="viewport"

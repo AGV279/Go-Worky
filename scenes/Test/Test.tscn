@@ -252,7 +252,7 @@ animations = [{
 }]
 
 [node name="Test" type="Node2D"]
-position = Vector2(0, 16)
+position = Vector2(-136, 16)
 metadata/_edit_group_ = true
 
 [node name="Floor" type="TileMap" parent="."]
