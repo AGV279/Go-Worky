@@ -1,4 +1,12 @@
-[gd_scene format=3 uid="uid://b488k1u0wnhos"]
+[gd_scene load_steps=2 format=3 uid="uid://b488k1u0wnhos"]
+
+[sub_resource type="FontFile" id="FontFile_80m1d"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
 
 [node name="AttackGui" type="Control"]
 layout_mode = 3
@@ -38,10 +46,15 @@ metadata/_edit_lock_ = true
 layout_mode = 0
 offset_left = 40.0
 offset_top = 336.0
-offset_right = 264.0
-offset_bottom = 472.0
-text = "Hola pedro"
-metadata/_edit_lock_ = true
+offset_right = 292.0
+offset_bottom = 515.0
+theme_override_fonts/font = SubResource("FontFile_80m1d")
+text = "Como trabajo denominamos al 
+conjunto de actividades que son 
+realizadas con el objetivo de 
+alcanzar una meta, solucionar 
+un problema o producir bienes y 
+servicios"
 
 [node name="Time" type="Label" parent="."]
 layout_mode = 0
@@ -49,7 +62,7 @@ offset_left = 32.0
 offset_top = 40.0
 offset_right = 104.0
 offset_bottom = 72.0
-text = "Time: 15
+text = "Time: 25
 "
 
 [node name="CoinsCollected" type="Label" parent="."]
