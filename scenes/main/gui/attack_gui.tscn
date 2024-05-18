@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b488k1u0wnhos"]
+[gd_scene load_steps=3 format=3 uid="uid://b488k1u0wnhos"]
+
+[ext_resource type="FontFile" uid="uid://dbpbfck6ejuo3" path="res://resources/Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/poco/Poco.ttf" id="1_x6twt"]
 
 [sub_resource type="FontFile" id="FontFile_80m1d"]
 cache/0/16/0/ascent = 0.0
@@ -43,6 +45,7 @@ text = "Pause"
 metadata/_edit_lock_ = true
 
 [node name="ExplanationText" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 40.0
 offset_top = 336.0
@@ -62,13 +65,35 @@ offset_left = 32.0
 offset_top = 40.0
 offset_right = 104.0
 offset_bottom = 72.0
+theme_override_fonts/font = ExtResource("1_x6twt")
+theme_override_font_sizes/font_size = 30
 text = "Time: 25
 "
 
 [node name="CoinsCollected" type="Label" parent="."]
 layout_mode = 0
 offset_left = 32.0
-offset_top = 64.0
-offset_right = 104.0
+offset_top = 72.0
+offset_right = 88.0
 offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("1_x6twt")
+theme_override_font_sizes/font_size = 30
 text = "Coins: 0"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 328.0
+offset_right = 280.0
+offset_bottom = 480.0
+color = Color(0, 0, 0, 0.643137)
+
+[node name="RichText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 328.0
+offset_right = 264.0
+offset_bottom = 480.0
+theme_override_fonts/normal_font = ExtResource("1_x6twt")
+bbcode_enabled = true
+text = "[color=yellow]Trabajo[/color] es un conjunto de actividades que son realizadas con el objetivo de alcanzar una meta, solucionar un problema o producir bienes y servicios para atender las necesidades humanas."

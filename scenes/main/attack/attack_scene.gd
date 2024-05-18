@@ -1,14 +1,19 @@
 extends Node
 
+const PLAY_TIME = 18
+var timer_label = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Timer.wait_time = 25
-	spawn_character()
+	timer_label = get_node("AttackGui/Time")
+	$Timer.wait_time = PLAY_TIME
+	spawn_character() 
 	print("ready")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	var time_left = $Timer.time_left
+	timer_label.set_text("Time: {time}".format({"time":time_left}))
 
 func _on_tree_area_1_input_event(viewport, event, shape_idx):
 	#Prevents from calling the signal twice for double click
@@ -46,4 +51,5 @@ func spawn_character():
 	player.show()
 	print(player.position)
 
-
+func _on_timer_timeout():
+	pass # Replace with function body.
