@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://bardg8x4gxwh8"]
+
+[ext_resource type="Texture2D" uid="uid://3wpsherhhuhw" path="res://resources/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Actions.png" id="1_6887u"]
+[ext_resource type="Texture2D" uid="uid://cwd4upialjijr" path="res://resources/Sprout Lands - Sprites - Basic pack/Characters/Basic Charakter Spritesheet.png" id="2_t8wp6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u1tep"]
+atlas = ExtResource("1_6887u")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8itmi"]
+atlas = ExtResource("1_6887u")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5cgf"]
+atlas = ExtResource("2_t8wp6")
+region = Rect2(0, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1joma"]
+atlas = ExtResource("2_t8wp6")
+region = Rect2(48, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah7w7"]
+atlas = ExtResource("2_t8wp6")
+region = Rect2(96, 144, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68dq4"]
+atlas = ExtResource("2_t8wp6")
+region = Rect2(144, 144, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xjdiu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u1tep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8itmi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5cgf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1joma")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ah7w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68dq4")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1txbb"]
+
+[node name="Character" type="Area2D"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CharacterAnimations" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xjdiu")
+animation = &"walking"
+frame_progress = 0.749659
+
+[node name="CollectionArea" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1txbb")

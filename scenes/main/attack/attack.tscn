@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ip1h5ai4eur0"]
+[gd_scene load_steps=14 format=3 uid="uid://ip1h5ai4eur0"]
 
+[ext_resource type="Script" path="res://scenes/main/attack/attack_scene.gd" id="1_1imwg"]
 [ext_resource type="Texture2D" uid="uid://dxmderd3m2a77" path="res://resources/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="1_hnlq7"]
 [ext_resource type="Texture2D" uid="uid://n3wnp3dlyhn6" path="res://resources/Sprout Lands - Sprites - Basic pack/Objects/Basic_Grass_Biom_things.png" id="2_jbtdj"]
 [ext_resource type="Texture2D" uid="uid://woaohcfhc5wt" path="res://resources/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="3_lka0x"]
+[ext_resource type="PackedScene" uid="uid://bardg8x4gxwh8" path="res://scenes/main/Character/character.tscn" id="4_wjpdk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ybnma"]
 resource_name = "GrassFloor"
@@ -206,10 +208,15 @@ texture = ExtResource("3_lka0x")
 [sub_resource type="TileSet" id="TileSet_gxia3"]
 sources/0 = SubResource("TileSetAtlasSource_lw6qw")
 
-[node name="Attack" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_herit"]
+size = Vector2(30, 30)
+
+[node name="AttackScene" type="Node2D"]
+script = ExtResource("1_1imwg")
 
 [node name="World" type="Node2D" parent="."]
 metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="Floor" type="TileMap" parent="World"]
 tile_set = SubResource("TileSet_nfwwa")
@@ -226,3 +233,49 @@ layer_0/tile_data = PackedInt32Array(131074, 0, 1, 65538, 0, 0, 65539, 0, 0, 655
 tile_set = SubResource("TileSet_gxia3")
 format = 2
 layer_0/tile_data = PackedInt32Array(1310723, 131072, 3, 1310724, 131072, 3, 1310725, 131072, 3, 1310726, 131072, 3, 1310727, 131072, 3, 1310728, 131072, 3, 1310729, 131072, 3, 1310730, 131072, 3, 1310731, 131072, 3, 1310732, 131072, 3, 1310733, 131072, 3, 1310734, 131072, 3, 1310735, 131072, 3, 1310736, 196608, 3, 1310722, 65536, 3)
+
+[node name="Character" parent="." instance=ExtResource("4_wjpdk")]
+
+[node name="TreeMarker1" type="Marker2D" parent="."]
+position = Vector2(96, 168)
+metadata/_edit_lock_ = true
+
+[node name="TreeMarker2" type="Marker2D" parent="."]
+position = Vector2(176, 168)
+metadata/_edit_lock_ = true
+
+[node name="TreeMarker3" type="Marker2D" parent="."]
+position = Vector2(96, 248)
+metadata/_edit_lock_ = true
+
+[node name="TreeMarker4" type="Marker2D" parent="."]
+position = Vector2(176, 248)
+metadata/_edit_lock_ = true
+
+[node name="TreeArea1" type="Area2D" parent="."]
+position = Vector2(112, 160)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea1"]
+shape = SubResource("RectangleShape2D_herit")
+
+[node name="TreeArea2" type="Area2D" parent="."]
+position = Vector2(192, 160)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea2"]
+shape = SubResource("RectangleShape2D_herit")
+
+[node name="TreeArea3" type="Area2D" parent="."]
+position = Vector2(112, 240)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea3"]
+shape = SubResource("RectangleShape2D_herit")
+
+[node name="TreeArea4" type="Area2D" parent="."]
+position = Vector2(192, 240)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeArea4"]
+shape = SubResource("RectangleShape2D_herit")
