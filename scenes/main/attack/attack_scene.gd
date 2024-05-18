@@ -12,24 +12,32 @@ func _process(delta):
 func _on_tree_area_1_input_event(viewport, event, shape_idx):
 	#Prevents from calling the signal twice for double click
 	if event is InputEventMouseButton && Input.is_action_just_released("select"):
+		var player = get_node("Character")
+		player.position = $TreeMarker1.position
 		print("To tree 1")
 		
 
 func _on_tree_area_2_input_event(viewport, event, shape_idx):
 	#Prevents from calling the signal twice for double click
 	if event is InputEventMouseButton && Input.is_action_just_released("select"):
+		var player = get_node("Character")
+		player.position = $TreeMarker2.position
 		print("To tree 2")
 		
 
 func _on_tree_area_3_input_event(viewport, event, shape_idx):
 	#Prevents from calling the signal twice for double click
 	if event is InputEventMouseButton && Input.is_action_just_released("select"):
+		var player = get_node("Character")
+		player.position = $TreeMarker3.position
 		print("To tree 3")
 
 
 func _on_tree_area_4_input_event(viewport, event, shape_idx):
 	#Prevents from calling the signal twice for double click
 	if event is InputEventMouseButton && Input.is_action_just_released("select"):
+		var player = get_node("Character")
+		player.position = $TreeMarker4.position
 		print("To tree 4")
 
 func spawn_character():
